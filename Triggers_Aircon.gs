@@ -23,7 +23,7 @@ function getAirconStatus(e)
     return;
   } 
   
-  return [getAirconFlag()];
+  return {"value1": getAirconFlag()};
 }
 
 function getAirconFlag()
