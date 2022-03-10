@@ -1,15 +1,14 @@
-function exec_goingToBed(e)
-{
-  if (e.parameter == undefined)
-  {
-    return;
+class Action_GoingToBed extends Action {
+  execGet() {
+    createSchedule_goingToBed();
+
+    return undefined;
   }
-  if(e.parameter.goingToBed == undefined)
+
+  getParameterName()
   {
-    return;
-  } 
-  
-  createSchedule_goingToBed();
+    return 'goingToBed';
+  }
 }
 
 function createSchedule_goingToBed()

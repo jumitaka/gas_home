@@ -1,16 +1,15 @@
-function exec_takeBath(e)
-{
-  if (e.parameter == undefined)
-  {
-    return;
+class Action_TakeBath extends Action {
+  execGet() {
+    createSchedule_takeBath();
+    takeBath();
+
+    return undefined;
   }
-  if(e.parameter.takeBath == undefined)
+
+  getParameterName()
   {
-    return;
+    return 'takeBath';
   }
-    
-  createSchedule_takeBath();
-  takeBath();
 }
 
 function createSchedule_takeBath()

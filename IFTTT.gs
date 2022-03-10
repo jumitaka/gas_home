@@ -1,7 +1,7 @@
 function ifttt_HueRelax()
 {
-  const HUEOFF = 'hueRelax';
-  return HUEOFF;
+  const HUERelax = 'hueRelax';
+  return HUERelax;
 }
 
 function ifttt_HueOff()

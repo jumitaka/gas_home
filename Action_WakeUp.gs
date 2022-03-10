@@ -1,18 +1,16 @@
-function exec_wakeUp(e)
-{
-  if (e.parameter == undefined)
-  {
-    return;
+class Action_WakeUp extends Action {  
+  execGet() {
+    deleteTrigger(goingToBed_In15Minutes.name);
+    deleteTrigger(goingToBed_In30Minutes.name);
+    deleteTrigger(goingToBed_In120Minutes.name);
+
+    return undefined;
   }
-  
-  if(e.parameter.wakeUp == undefined)
+
+  getParameterName()
   {
-    return;
-  } 
-  
-  deleteTrigger(goingToBed_In15Minutes.name);
-  deleteTrigger(goingToBed_In30Minutes.name);
-  deleteTrigger(goingToBed_In120Minutes.name);
+    return 'wakeUp';
+  }
 }
 
 function createSchedule_wakeUp()
