@@ -1,3 +1,3 @@
-function toBoolean (data) {
+function toBoolean(data) {
   return data.toLowerCase() === 'true';
 }

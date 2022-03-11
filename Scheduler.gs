@@ -1,18 +1,22 @@
-function createTrigger(functionName, durationMinutes)
-{
+/* 
+  トリガー作成
+ */
+function createTrigger(functionName, durationMinutes) {
   var durationMilliseconds = durationMinutes * 60 * 1000;
 
   var trigger = ScriptApp.newTrigger(functionName).timeBased().after(durationMilliseconds).create();
 }
 
-function deleteTrigger(functionName)
-{
+/* 
+  トリガー削除
+ */
+function deleteTrigger(functionName) {
   ScriptApp.getProjectTriggers().filter(
-    function(trigger){
+    function (trigger) {
       return trigger.getHandlerFunction() == functionName
     }
   ).forEach(
-    function(trigger){
+    function (trigger) {
       ScriptApp.deleteTrigger(trigger);
     }
   );

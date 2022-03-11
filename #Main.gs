@@ -1,9 +1,3 @@
-function doDebug() {
-  var e　= {'parameter': {'aircon':32}};
-
-  doPost(e);
-}
-
 function doPost(e) {
   // GASが302を返すと、IFTTTで制御不可となるため未使用
   Logger.log(e);
@@ -36,4 +30,11 @@ function doGet(e) {
   output.setContent(payload);
   // return response-data
   return output;
+}
+
+// デバッグ用
+function doDebug() {
+  var e　= {'parameter': {'aircon': undefined}};
+
+  doPost(e);
 }

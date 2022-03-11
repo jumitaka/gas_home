@@ -1,12 +1,16 @@
+/* 
+  Actionクラス
+  抽象クラスとして使用
+ */
 class Action {
   isTarget(e) {
-    if(e.parameter == undefined) {
+    if (e.parameter == undefined) {
       return false;
     }
 
     var name = this.getParameterName();
 
-    if(e.parameter[name] == undefined) {
+    if (e.parameter[name] == undefined) {
       return false;
     }
 
