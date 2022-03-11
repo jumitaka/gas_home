@@ -12,7 +12,9 @@ function doGet(e) {
       new Action_GoingToBed(),
       new Action_TakeBath(),
       new Action_WakeUp(),
-      new Action_ToggleAircon()
+      new Action_ToggleAircon(),
+      new Action_LEDMorning(),
+      new Action_LEDNight()
       ];
 
 
@@ -34,7 +36,7 @@ function doGet(e) {
 
 // デバッグ用
 function doDebug() {
-  var e　= {'parameter': {'aircon': undefined}};
+  var e　= {'parameter': {'LEDMorning': ''}};
 
-  doPost(e);
+  doGet(e);
 }

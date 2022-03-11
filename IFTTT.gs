@@ -14,6 +14,26 @@ function ifttt_ACSleep() {
   return ACSLEEP;
 }
 
+function ifttt_LEDBedMorning() {
+  const LEDBedMorning = 'LEDBedMorning';
+  return LEDBedMorning;
+}
+
+function ifttt_LEDBedNight() {
+  const LEDBedNight = 'LEDBedNight';
+  return LEDBedNight;
+}
+
+function ifttt_LEDLivingMorning() {
+  const LEDLivingMorning = 'LEDLivingMorning';
+  return LEDLivingMorning;
+}
+
+function ifttt_LEDLivingNight() {
+  const LEDLivingNight = 'LEDLivingNight';
+  return LEDLivingNight;
+}
+
 /* 
   IFTTTリクエスト呼び出し
   key情報は、プロジェクトのプロパティIFTTTKEYにて保持
