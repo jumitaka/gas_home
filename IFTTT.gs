@@ -42,12 +42,14 @@ function execIFTTT(event) {
 
   const IFTTTKEY = "IFTTT_Key";
   var ifttt_key = PropertiesService.getScriptProperties().getProperty(IFTTTKEY);
-  var urlFormat = "https://maker.ifttt.com/trigger/{event}/with/key/dHHa4DlVYPC2MIwtDndpvO"
+  var urlFormat = "https://maker.ifttt.com/trigger/{event}/with/key/{key}"
+  
+  var url = urlFormat.replace('{key}', ifttt_key)
 
   var options =
   {
     "method": "post"
   };
 
-  UrlFetchApp.fetch(urlFormat.replace('{event}', event), options);
+  UrlFetchApp.fetch(url.replace('{event}', event), options);
 }

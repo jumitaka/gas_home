@@ -36,7 +36,7 @@ function doGet(e) {
 
 // デバッグ用
 function doDebug() {
-  var e　= {'parameter': {'LEDMorning': ''}};
+  var e　= {'parameter': {'LEDNight': ''}};
 
   doGet(e);
 }
