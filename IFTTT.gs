@@ -9,9 +9,9 @@ function ifttt_HueOff() {
   return HUEOFF;
 }
 
-function ifttt_ACSleep() {
-  const ACSLEEP = 'acSleep';
-  return ACSLEEP;
+function ifttt_LEDTimer() {
+  const LEDTimer = 'LEDTimer';
+  return LEDTimer;
 }
 
 function ifttt_LEDBedMorning() {
