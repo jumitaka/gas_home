@@ -34,6 +34,11 @@ function ifttt_LEDLivingNight() {
   return LEDLivingNight;
 }
 
+function ifttt_ACSleep() {
+  const ACSleep = 'ACSleep';
+  return ACSleep;
+}
+
 /* 
   IFTTTリクエスト呼び出し
   key情報は、プロジェクトのプロパティIFTTTKEYにて保持
