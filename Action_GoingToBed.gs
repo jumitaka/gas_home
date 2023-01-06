@@ -30,6 +30,7 @@ function goingToBed_In15Minutes() {
 function goingToBed_In30Minutes() {
   if (getBathFlag()) {
     execIFTTT(ifttt_LEDTimer());
+    execIFTTT(ifttt_HueOff());
   }
 
   deleteTrigger(arguments.callee.name);
