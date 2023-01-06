@@ -2,6 +2,11 @@
   トリガー作成
  */
 function createTrigger(functionName, durationMinutes) {
+  if(durationMinutes <= 0)
+  {
+    functionName();
+  }
+
   var durationMilliseconds = durationMinutes * 60 * 1000;
 
   var trigger = ScriptApp.newTrigger(functionName).timeBased().after(durationMilliseconds).create();
