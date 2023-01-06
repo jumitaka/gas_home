@@ -43,7 +43,7 @@ function ifttt_ACSleep() {
   IFTTTリクエスト呼び出し
   key情報は、プロジェクトのプロパティIFTTTKEYにて保持
  */
-function execIFTTT(event) {
+function execIFTTT(event, json) {
 
   const IFTTTKEY = "IFTTT_Key";
   var ifttt_key = PropertiesService.getScriptProperties().getProperty(IFTTTKEY);
@@ -53,7 +53,8 @@ function execIFTTT(event) {
 
   var options =
   {
-    "method": "post"
+    "method": "post",
+    'payload' : json
   };
 
   UrlFetchApp.fetch(url.replace('{event}', event), options);
