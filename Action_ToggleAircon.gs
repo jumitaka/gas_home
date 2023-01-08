@@ -6,12 +6,10 @@ class Action_ToggleAircon extends Action {
   }
 
   getParameterName() {
+    const PARAM_AIRCON = 'aircon';
     return PARAM_AIRCON;
   }
 }
-
-const PARAM_AIRCON = 'aircon';
-const AIRCON_FLAG = 'AirconFlag';
 
 function getAirconFlag() {
   var strFlg = PropertiesService.getScriptProperties().getProperty(getAirconFlagName());
@@ -30,5 +28,6 @@ function toggleAirconFlag() {
 }
 
 function getAirconFlagName() {
+  const AIRCON_FLAG = 'AirconFlag';
   return AIRCON_FLAG;
 }

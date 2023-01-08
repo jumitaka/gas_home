@@ -14,7 +14,8 @@ function doGet(e) {
       new Action_WakeUp(),
       new Action_ToggleAircon(),
       new Action_LEDMorning(),
-      new Action_LEDNight()
+      new Action_LEDNight(),
+      new Action_AlermClockReschedule()
       ];
 
 

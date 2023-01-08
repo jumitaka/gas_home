@@ -4,20 +4,20 @@ class Action_TakeBath extends Action {
     takeBath();
 
     return undefined;
+
+    function createSchedule_takeBath() {
+      deleteTrigger(takeBath_In720Minutes.name);
+      createTrigger(takeBath_In720Minutes.name, 720);
+    }
   }
 
   getParameterName() {
+    const PARAM_TAKEBATH = 'takeBath';
     return PARAM_TAKEBATH;
   }
 }
 
-const PARAM_TAKEBATH = 'takeBath';
 const BATH_FLAG = 'BathFlag';
-
-function createSchedule_takeBath() {
-  deleteTrigger(takeBath_In720Minutes.name);
-  createTrigger(takeBath_In720Minutes.name, 720);
-}
 
 function takeBath_In720Minutes() {
   resetBathFlag();

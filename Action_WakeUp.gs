@@ -8,11 +8,10 @@ class Action_WakeUp extends Action {
   }
 
   getParameterName() {
+    const PARAM_WAKEUP = 'wakeUp';
     return PARAM_WAKEUP;
   }
 }
-
-const PARAM_WAKEUP = 'wakeUp';
 
 function createSchedule_wakeUp() {
   createTrigger(wakeUp_In10Minutes.name, 10);

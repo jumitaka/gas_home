@@ -11,6 +11,7 @@ class Action_LEDNight extends Action {
   }
 
   getParameterName() {
+    const PARAM_LEDNight = 'LEDNight';
     return PARAM_LEDNight;
   }
 }
@@ -26,5 +27,3 @@ function ledBedNight() {
 
   deleteTrigger(arguments.callee.name);
 }
-
-const PARAM_LEDNight = 'LEDNight';

@@ -6,19 +6,18 @@ class Action_GoingToBed extends Action {
     createSchedule_goingToBed();
 
     return undefined;
+
+    function createSchedule_goingToBed() {
+      createTrigger(goingToBed_In15Minutes.name, 15);
+      createTrigger(goingToBed_In30Minutes.name, 30);
+      createTrigger(goingToBed_In120Minutes.name, 120);
+    }
   }
 
   getParameterName() {
+    const PARAM_GOINGTOBED = 'goingToBed';
     return PARAM_GOINGTOBED;
   }
-}
-
-const PARAM_GOINGTOBED = 'goingToBed';
-
-function createSchedule_goingToBed() {
-  createTrigger(goingToBed_In15Minutes.name, 15);
-  createTrigger(goingToBed_In30Minutes.name, 30);
-  createTrigger(goingToBed_In120Minutes.name, 120);
 }
 
 function goingToBed_In15Minutes() {

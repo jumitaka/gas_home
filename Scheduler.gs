@@ -12,6 +12,10 @@ function createTrigger(functionName, durationMinutes) {
   var trigger = ScriptApp.newTrigger(functionName).timeBased().after(durationMilliseconds).create();
 }
 
+function createTriggerDate(functionName, triggerDate) {
+  var trigger = ScriptApp.newTrigger(functionName).timeBased().at(triggerDate).create();
+}
+
 /* 
   トリガー削除
  */

@@ -5,7 +5,7 @@ function ifttt_HueRelax() {
 }
 
 function ifttt_HueOff() {
-  const HUEOFF = 'hueOff';
+  const HUEOFF = 'HueOff';
   return HUEOFF;
 }
 
@@ -37,6 +37,16 @@ function ifttt_LEDLivingNight() {
 function ifttt_ACSleep() {
   const ACSleep = 'ACSleep';
   return ACSleep;
+}
+
+function ifttt_HueMorning() {
+  const HUEMORNING = 'HueMorning';
+  return HUEMORNING;
+}
+
+function ifttt_TvOff() {
+  const TVOFF = 'TvOff';
+  return TVOFF;
 }
 
 /* 
