@@ -1,26 +1,40 @@
 function alermClock() {
   var alermClockCalendarId = PropertiesService.getScriptProperties().getProperty('AlermClockCalendarId');
-  var calendar = CalendarApp.getOwnedCalendarById(alermClockId);
+  var calendar = CalendarApp.getOwnedCalendarById(alermClockCalendarId);
 
   var today = new Date();
 
-  var todeySchedules = Calendar.getEventsForDay(today);
+  var todeySchedules = calendar.getEventsForDay(today);
 
   todeySchedules.forEach(schedule => {
-    schedule.getStartTime()
+    var scheduleTime = schedule.getStartTime();
+    scheduleTime.setHours(scheduleTime.getHours() - 1);
+    scheduleTime.setMinutes(scheduleTime.getMinutes() - 30);
+    
+    if(today > scheduleTime)
+    {
+      return;
+    }
 
-    createTriggerDate(hueMorning.name, schedule.getStartTime());
+    createTriggerDate(hueMorning.name, scheduleTime);
   });
+
+  var methodName = arguments.callee.name;
+
+  deleteTrigger(methodName);
 
   var hasTrigger = ScriptApp.getProjectTriggers().includes(
     function (trigger) {
-      return trigger.getHandlerFunction() == arguments.callee.name
+      return trigger.getHandlerFunction() == methodName
     }
   );
 
   if(hasTrigger == false)
   {
-    var trigger = ScriptApp.newTrigger(arguments.callee.name).timeBased().onMonthDay(28).create();
+    var triggerDate = new Date(today.getTime());
+    triggerDate.setDate(triggerDate.getDate() + 1);
+    triggerDate.setHours(2, 0, 0);
+    createTriggerDate(methodName, triggerDate);
   }
 }
 
