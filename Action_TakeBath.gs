@@ -17,7 +17,7 @@ class Action_TakeBath extends Action {
   }
 }
 
-const BATH_FLAG = 'BathFlag';
+
 
 function takeBath_In720Minutes() {
   resetBathFlag();
@@ -40,6 +40,7 @@ function getBathFlag() {
 }
 
 function getBathFlagName() {
+  const BATH_FLAG = 'BathFlag';
   return BATH_FLAG;
 }
 

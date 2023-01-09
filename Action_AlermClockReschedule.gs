@@ -6,8 +6,8 @@ class Action_AlermClockReschedule extends Action {
     return undefined;
   }
   getParameterName() {
+    const PARAM_ALERMCLOCKRESCHEDULE = 'AlermClockReschedule';
     return PARAM_ALERMCLOCKRESCHEDULE;
   }
 }
 
-const PARAM_ALERMCLOCKRESCHEDULE = 'AlermClockReschedule';
