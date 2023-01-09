@@ -41,4 +41,6 @@ function alermClock() {
 function hueMorning()
 {
   execIFTTT(ifttt_HueMorning());
+
+  deleteTrigger(arguments.callee.name);
 }
